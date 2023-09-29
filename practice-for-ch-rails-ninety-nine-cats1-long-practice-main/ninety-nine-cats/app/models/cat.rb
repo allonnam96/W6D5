@@ -14,9 +14,10 @@
 
 require "action_view"
 
-CAT_COLORS = ["orange", "pink"]
-SEX_OPTIONS = ["M","F"]
+
 class Cat < ApplicationRecord
+    CAT_COLORS = ["orange", "pink", "white", "blue", "red"]
+    SEX_OPTIONS = ["M","F"]
   validates :birth_date, :color, :name, :sex, presence:true
   validates :color, inclusion: {in: CAT_COLORS}
   validates :sex, inclusion: {in: SEX_OPTIONS}
@@ -28,8 +29,7 @@ class Cat < ApplicationRecord
     end
 
     def age
-        (Date.today - birth_date)/365.0
-        # age_words = time_ago_in_words(Time.now - birth_date)
+        time_ago_in_words(birth_date)
         # age_words
     end
 

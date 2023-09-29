@@ -1,0 +1,22 @@
+<h1> All My Cats <h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="2">Cats</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @cats.each do |cat| %>
+    <tr>
+      <td><%= cat.name  %></td>
+      <td><%= cat.color %></td>
+      <td><%= cat.sex %></td>
+      <td><%= cat.birth_date %></td>
+       <td><%= cat.description %></td>
+       <td><a href="<%= cat_url(cat) %>">Link to Cat</a></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+

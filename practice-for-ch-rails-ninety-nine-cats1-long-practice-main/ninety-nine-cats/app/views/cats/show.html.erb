@@ -1,0 +1,20 @@
+<h1> One of My Cats <h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @cat.name  %></td>
+      <td><%= @cat.color %></td>
+      <td><%= @cat.sex %></td>
+      <td><%= @cat.birth_date %></td>
+       <td><%= @cat.description %></td>
+       <td><a href="<%= cats_url %>">Link to all Cats</a></td>
+    </tr>
+  </tbody>
+</table>
+
